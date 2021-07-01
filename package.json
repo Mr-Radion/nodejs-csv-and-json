@@ -1,0 +1,30 @@
+{
+  "name": "nodejs-csv-and-json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "conversion-server.js",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "csvtojson": "^2.0.10",
+    "json2csv": "^5.0.6",
+    "parcel-bundler": "^1.12.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "parcel ./convert-browser/index.html -p 5500 --open",
+    "build": "parcel build ./convert-browser/index.html --no-source-maps",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mr-Radion/nodejs-csv-and-json.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mr-Radion/nodejs-csv-and-json/issues"
+  },
+  "homepage": "https://github.com/Mr-Radion/nodejs-csv-and-json#readme"
+}
