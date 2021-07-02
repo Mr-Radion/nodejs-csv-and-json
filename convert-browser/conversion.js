@@ -1,7 +1,6 @@
 import CSVToJSON from 'csvtojson';
 
-const text = document.querySelector('.text');
-const input = document.querySelector('#profile_pic');
+const input = document.querySelector('#simple_file');
 const reader = new FileReader();
 
 input.addEventListener('change', fileUploadHandler);
@@ -14,21 +13,10 @@ function fileUploadHandler(event) {
     CSVToJSON()
       .fromString(reader.result)
       .then((elem) => {
-        // elem.push({
-        //   Header: 'Money',
-        //   Description: '$ 1.000.000.000.000 for safety',
-        // });
-        renderTable(elem);
-        // elem.forEach((file) => text.insertAdjacentText('beforeend', file.IP_ADDRESS));
-        // console.log(JSON.stringify(elem)); // запрос на сервер при нажатии на кнопку отправить
+        console.log(JSON.stringify(elem));
       });
   };
-}
-
-function renderTable(elem) {
-  elem.push({
-    Header: 'Money',
-    Description: '$ 1.000.000.000.000 for safety',
-  });
-  elem.forEach((file) => text.insertAdjacentText('beforeend', file.IP_ADDRESS));
+  reader.onerror = function () {
+    console.log(reader.error);
+  };
 }
